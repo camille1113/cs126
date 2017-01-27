@@ -2,8 +2,11 @@
  * Created by zhanglanxin on 1/22/17.
  */
 public class TicTacToe {
-    public static String main(String[] args){
+    public static void main(String[] args){
+        temp(args);
+    }
 
+    public static String temp(String[] args) {
         return getString(args);
     }
 
