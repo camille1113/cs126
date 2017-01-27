@@ -13,14 +13,11 @@ public class TicTacToeTest {
         String[] input3 = {"OXX", "XOX", "OXX"};
         String[] input4 = {"...", "XOX", "OXX"};
         String[] input5 = {"X.O", "XXX", "OOO"};
-        assertTrue(TicTacToe.main(input1).equals("Player O wins!"));
-        assertTrue(TicTacToe.main(input2).equals("Player O wins!"));
-        assertFalse(TicTacToe.main(input2).equals("Player X wins!"));
-        assertTrue(TicTacToe.main(input3).equals("Player X wins!"));
-        assertTrue(TicTacToe.main(input4).equals("No winner"));
-        assertFalse(TicTacToe.main(input4).equals("Player O wins!"));
-        assertFalse(TicTacToe.main(input4).equals("Player X wins!"));
-        assertTrue(TicTacToe.main(input5).equals("Player O wins!"));
+        assertEquals( TicTacToe.temp(input1),"Player O wins!");
+        assertEquals(TicTacToe.temp(input2),"Player O wins!");
+        assertEquals(TicTacToe.temp(input3),"Player X wins!");
+        assertEquals(TicTacToe.temp(input4),"No winner");
+        assertEquals(TicTacToe.temp(input5),"Player O wins!");
     }
 
 }
