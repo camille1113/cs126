@@ -32,6 +32,6 @@ public class TicTacToeTest {
     //test for no winners
     public void noWin() throws Exception{
         String[] input = {"...", "XOX", "OXX"};
-        assertEquals(TicTacToe.temp(input),"No winner.");
+        assertEquals(TicTacToe.temp(input),"There is no winner.");
     }
 }
