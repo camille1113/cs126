@@ -19,7 +19,7 @@ public class TicTacToe {
                 return "Player X wins!";
             }
         }
-        return "No winner.";
+        return "There is no winner.";
     }
     //this method rearranges the args in order of rows, columns and diagonals
     //and convert it to a string
@@ -33,7 +33,7 @@ public class TicTacToe {
             }
         }
         String result1 = row.toString();
-        if(!tester(result1).equals("No winner."))
+        if(!tester(result1).equals("There is no winner."))
             return tester(result1); //only return if it finds which one wins
                                     //since there are other possibilities left untested
 
@@ -45,7 +45,7 @@ public class TicTacToe {
             }
         }
         String result2 = col.toString();
-        if(!tester(result2).equals("No winner."))
+        if(!tester(result2).equals("There is no winner."))
             return tester(result2); //only return if it finds which one wins
                                     //since there are other possibilities left untested
 
@@ -55,7 +55,7 @@ public class TicTacToe {
             dia.append(args[k].charAt(k));
         }
         String result3 = dia.toString()+"......"; //add six "."s to prevent StringOutOfBoundsException
-        if(!tester(result3).equals("No winner."))
+        if(!tester(result3).equals("There is no winner."))
             return tester(result3);
 
         for(int k = 0; k < 3; k++) {
