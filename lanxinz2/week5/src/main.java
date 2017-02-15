@@ -122,6 +122,9 @@ public class main {
         return null;
     }
 
+    /**
+     * this method test whether the url the user put is valid
+     */
     public static boolean isValidUrl(String url){
         boolean checker = true;
         if(!url.contains("http")){
