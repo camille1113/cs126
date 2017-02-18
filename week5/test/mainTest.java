@@ -29,6 +29,7 @@ public class mainTest {
         String direct1 = "WeSt";
         assertEquals(expectedRoomName1,main.getCurrentRoomName(direct1, testRoom1.getDirections().size(), testRoom1));
 
+        //test for non-direction input
         Room testRoom2 = siebelRoom.get(2);
         String direct2 = "dancing all night";
         assertEquals("I can't go dancing all night",
@@ -51,15 +52,15 @@ public class mainTest {
     @Test
     public void isValidUrlTest() throws Exception {
 
-        //test for "http"
+        //test whether the url contains "http"
         String testURL1 = "www.google.com";
         assertFalse(main.isValidUrl(testURL1));
 
-        //test for "json"
+        //test for "json" keyword
         String testURL2 = "https://courses.engr.illinois.edu/cs126/resources/siebel";
         assertFalse(main.isValidUrl(testURL2));
 
-        //test for space
+        //test for space in the url
         String testURL3 = "https://courses.engr.illinois.ed  u/cs126/resources/siebel.json";
         assertFalse(main.isValidUrl(testURL3));
 
