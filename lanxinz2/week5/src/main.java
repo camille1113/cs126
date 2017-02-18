@@ -8,7 +8,7 @@ import java.util.List;
 public class main {
 
     public static void main(String[] args) throws IOException {
-        siebelMap.floorPlanValidator();
+        siebelMap.isfloorPlanValidate();
         Scanner in = new Scanner(System.in);
         repl(in);//read evaluate print loop
     }

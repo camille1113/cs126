@@ -35,7 +35,7 @@ public class siebelMap {
      * @return boolean
      * @throws IOException
      */
-    public static boolean floorPlanValidator() throws IOException {
+    public static boolean isfloorPlanValidate() throws IOException {
         Layout siebelLayout = siebelMap.getLayout(SIEBEL_URL);
         List<Room> siebelRoom = siebelLayout.getRooms();
 
@@ -59,7 +59,7 @@ public class siebelMap {
 
                 if(!isInNextRoom(nextRoom, currentRoomName)){
                     System.out.println("Is this map validate: " + checker);
-                    return false; //if it did not find current room in the next room, just return false
+                    return checker; //if it did not find current room in the next room, just return false
                 }
                 else{
                     checker = true;
