@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     private int symbols;
     private int letters;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
