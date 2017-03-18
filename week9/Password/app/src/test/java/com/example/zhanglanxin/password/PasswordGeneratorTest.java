@@ -73,11 +73,4 @@ public class PasswordGeneratorTest {
     }
 
 
-    @Test
-    public void testShuffle() throws Exception {
-        assertFalse(PasswordGenerator.shuffle(test1)==test1);
-        assertFalse(PasswordGenerator.shuffle(test2)==test2);
-        assertFalse(PasswordGenerator.shuffle(test3)==test3);
-    }
-
 }
