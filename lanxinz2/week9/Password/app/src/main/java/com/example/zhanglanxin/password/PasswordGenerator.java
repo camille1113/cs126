@@ -22,6 +22,8 @@ public class PasswordGenerator {
     public static String generate(int numbers, int symbols, int letters){
         if(letters<0)
             return "Incorrect length";
+        if(numbers+symbols+letters>100)
+            return "password too long!";
         Random random = new Random();
         StringBuilder randomStringBuilder = new StringBuilder();
         int tempNumber;

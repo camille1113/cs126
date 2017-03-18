@@ -73,7 +73,6 @@ public class PasswordGeneratorTest {
     }
 
 
-
     @Test
     public void testShuffle() throws Exception {
         assertFalse(PasswordGenerator.shuffle(test1)==test1);
