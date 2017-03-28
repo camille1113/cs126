@@ -1,0 +1,78 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml:2:1-22:12
+	package
+		ADDED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml:3:5-45
+		INJECTED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml:5:22-64
+application
+ADDED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml:6:5-20:19
+MERGED from [com.android.support:appcompat-v7:25.2.0] /Users/zhanglanxin/.android/build-cache/cbff56b1a74de9f94971c5f34d91ba4ca0a49a57/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:25.2.0] /Users/zhanglanxin/.android/build-cache/b1a4f105ceb2a8a574dd903d3977ce5f059f1578/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] /Users/zhanglanxin/.android/build-cache/f9e3b056ed556ecae2a22e7b02ba8e997bd80e29/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] /Users/zhanglanxin/.android/build-cache/c0f560b2af765f17d4d4e21c6a1d003ccf5b2069/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] /Users/zhanglanxin/.android/build-cache/7d6e586710556e973264824fcdb76a971259664e/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.2.0] /Users/zhanglanxin/.android/build-cache/986cce69e680255fc4f98c6281b91833ddf0f25f/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.2.0] /Users/zhanglanxin/.android/build-cache/ba6ee98ee67aeede162409e9b43048c9a15bb7b4/output/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/zhanglanxin/.android/build-cache/178245ab06ab472297f6af97e784ab98bf99f483/output/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] /Users/zhanglanxin/.android/build-cache/bf4b35a0bbaad70465fa09d0d7433f6b6c8edcf8/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] /Users/zhanglanxin/.android/build-cache/a2773b2478ff9b25765f25419c02a5f93b69362c/output/AndroidManifest.xml:25:5-20
+	android:label
+		ADDED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml:9:9-41
+	android:supportsRtl
+		ADDED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml:11:9-35
+	android:roundIcon
+		ADDED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml:10:9-54
+	android:allowBackup
+		ADDED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml:7:9-35
+	android:icon
+		ADDED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml:8:9-43
+	android:theme
+		ADDED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml:12:9-40
+activity#com.example.zhanglanxin.movies.MainActivity
+ADDED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml:13:9-19:20
+	android:name
+		ADDED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml:13:19-47
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml:14:13-18:29
+action#android.intent.action.MAIN
+ADDED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml:15:17-69
+	android:name
+		ADDED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml:15:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml:17:17-77
+	android:name
+		ADDED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml:17:27-74
+uses-sdk
+INJECTED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:25.2.0] /Users/zhanglanxin/.android/build-cache/cbff56b1a74de9f94971c5f34d91ba4ca0a49a57/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.2.0] /Users/zhanglanxin/.android/build-cache/b1a4f105ceb2a8a574dd903d3977ce5f059f1578/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.2.0] /Users/zhanglanxin/.android/build-cache/f9e3b056ed556ecae2a22e7b02ba8e997bd80e29/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.2.0] /Users/zhanglanxin/.android/build-cache/c0f560b2af765f17d4d4e21c6a1d003ccf5b2069/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.2.0] /Users/zhanglanxin/.android/build-cache/7d6e586710556e973264824fcdb76a971259664e/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.2.0] /Users/zhanglanxin/.android/build-cache/986cce69e680255fc4f98c6281b91833ddf0f25f/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.2.0] /Users/zhanglanxin/.android/build-cache/ba6ee98ee67aeede162409e9b43048c9a15bb7b4/output/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/zhanglanxin/.android/build-cache/178245ab06ab472297f6af97e784ab98bf99f483/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:recyclerview-v7:25.2.0] /Users/zhanglanxin/.android/build-cache/8a428ef90d773f41ef8d43e376a52e52835a9bbc/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-core-ui:25.2.0] /Users/zhanglanxin/.android/build-cache/bf4b35a0bbaad70465fa09d0d7433f6b6c8edcf8/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.2.0] /Users/zhanglanxin/.android/build-cache/a2773b2478ff9b25765f25419c02a5f93b69362c/output/AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:25.2.0] /Users/zhanglanxin/.android/build-cache/cbff56b1a74de9f94971c5f34d91ba4ca0a49a57/output/AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/zhanglanxin/cs126/Movies/app/src/main/AndroidManifest.xml

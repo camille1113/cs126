@@ -1,0 +1,7 @@
+#Mon Mar 27 16:39:16 CDT 2017
+base.0=/Users/zhanglanxin/Desktop/CS126/ud851-Exercises/Lesson02-GitHub-Repo-Search/Movies/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_7b0ff26cd1431d4d8fc7bdc2b200160414fba7a3
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/Users/zhanglanxin/Desktop/CS126/ud851-Exercises/Lesson02-GitHub-Repo-Search/Movies/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_2a637ee1d089841456d9f1427339814d4043bc7c/classes.dex
+base.1=/Users/zhanglanxin/Desktop/CS126/ud851-Exercises/Lesson02-GitHub-Repo-Search/Movies/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_2a637ee1d089841456d9f1427339814d4043bc7c
+file.0=/Users/zhanglanxin/Desktop/CS126/ud851-Exercises/Lesson02-GitHub-Repo-Search/Movies/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_7b0ff26cd1431d4d8fc7bdc2b200160414fba7a3/classes.dex
