@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/zhanglanxin/Desktop/CS126/ud851-Exercises/Lesson02-GitHub-Repo-Search/Movies/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher_round.png",
+        "source": "/Users/zhanglanxin/Desktop/CS126/ud851-Exercises/Lesson02-GitHub-Repo-Search/Movies/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/zhanglanxin/Desktop/CS126/ud851-Exercises/Lesson02-GitHub-Repo-Search/Movies/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
+        "source": "/Users/zhanglanxin/Desktop/CS126/ud851-Exercises/Lesson02-GitHub-Repo-Search/Movies/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/zhanglanxin/cs126/Movies/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
+        "source": "/Users/zhanglanxin/cs126/Movies/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/zhanglanxin/cs126/Movies/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher_round.png",
+        "source": "/Users/zhanglanxin/cs126/Movies/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    }
+]

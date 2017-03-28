@@ -1,0 +1,4 @@
+#Mon Mar 27 11:51:22 CDT 2017
+base.0=/Users/zhanglanxin/Desktop/CS126/ud851-Exercises/Lesson02-GitHub-Repo-Search/Movies/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0
+renamed.0=classes.dex
+file.0=/Users/zhanglanxin/Desktop/CS126/ud851-Exercises/Lesson02-GitHub-Repo-Search/Movies/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex
