@@ -36,34 +36,66 @@ import static org.junit.Assert.*;
 public class ExampleInstrumentedTest {
     FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     DatabaseReference names = firebaseDatabase.getReference("name");
-    int numberOfChildren;
+    int numberOfChildrenAdd;
+    int numberOfChildrenRemoved;
 
     @Test
-    public void name() throws Exception {
+    public void writeValueTest() throws Exception {
         final CountDownLatch countDownLatch = new CountDownLatch(1);
-        numberOfChildren = 0;
-
-        names.setValue("none").addOnCompleteListener(new OnCompleteListener<Void>() {
+        numberOfChildrenAdd = 3;
+        numberOfChildrenRemoved = 3;
+        names.push().setValue("test").addOnCompleteListener(new OnCompleteListener<Void>(){
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 countDownLatch.countDown();
             }
         });
-        countDownLatch.await(1, TimeUnit.SECONDS);
-        assertEquals(3,numberOfChildren);
+        names.child("Camille").removeValue().addOnCompleteListener(new OnCompleteListener<Void>(){
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                countDownLatch.countDown();
+            }
+        });
+        names.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                Log.d("CHILD",dataSnapshot.getKey());
+                numberOfChildrenAdd++;
+            }
 
-//        names.addChildEventListener(new ChildEventListener() {
-//            @Override
-//            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-//                Log.d("CHILD",dataSnapshot.getKey());
-//                numberOfChildren++;
-//            }
-//
-//        });
-        names.addListenerForSingleValueEvent(new ValueEventListener(){
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+                Log.d("CHILD",dataSnapshot.getKey());
+                numberOfChildrenRemoved--;
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+        countDownLatch.await(1, TimeUnit.SECONDS);
+        assertEquals(4,numberOfChildrenAdd);
+        assertEquals(2,numberOfChildrenRemoved);
+    }
+
+    @Test
+    public void readValueTest() throws Exception{
+        final CountDownLatch countDownLatch = new CountDownLatch(1);
+        names.child("-Ki316gR0G2YeKr9sVjZ").addListenerForSingleValueEvent(new ValueEventListener(){
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                assertEquals("expected value",
+                assertEquals("CAMILLE",
                         dataSnapshot.getValue(String.class));
                 countDownLatch.countDown();
             }
@@ -72,25 +104,6 @@ public class ExampleInstrumentedTest {
             }
         });
         countDownLatch.await(1, TimeUnit.SECONDS);
-        //            @Override
-//            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-//
-//            }
-//
-//            @Override
-//            public void onChildRemoved(DataSnapshot dataSnapshot) {
-//
-//            }
-//
-//            @Override
-//            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-//
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//
-//            }
 
     }
     @Test
