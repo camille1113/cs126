@@ -1,21 +1,23 @@
-#include "link.cpp"
+#include "link.h"
 
 #include <iostream>
 #include <string>
 
 int main(){
-	Link* tail = NULL;
+	Link* curr = NULL;
 	Link* head;
-	string input;
+	string* input = NULL;
 	for(int i = 0; i < 10; i++){
-		getline(cin, input);
-		head = new Link(&input, tail);
-		tail = head;
+		getline(cin, *input);
+		head = new Link(input, curr);
+		curr = head;
 	}
 	head->printAll();
+        Link* temp = head;
 	for(int i = 0; i < 10; i++){
-		head->~Link();
-		head = head->getNext();
+            head = head->getNext();
+            delete temp;
+            temp = head;
 	}
 	return 42;
 }
