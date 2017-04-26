@@ -60,7 +60,7 @@ public class DetailActivity extends AppCompatActivity {
         //adapter
         FirebaseRecyclerAdapter<String, UsernameViewHolder> firebaseRecyclerAdapter =
                 new FirebaseRecyclerAdapter<String, UsernameViewHolder>(String.class, R.layout.names,
-                        UsernameViewHolder.class, mRestaurantReference.child(restaurant.getName()).child("Customers")){
+                        UsernameViewHolder.class, mRestaurantReference.child("Customers")){
                     @Override
                     protected void populateViewHolder(UsernameViewHolder viewHolder, String model, int position) {
                         viewHolder.mTextView.setText(model);
