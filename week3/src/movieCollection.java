@@ -28,7 +28,10 @@ public class movieCollection {
         return total_results;
     }
 
-
+    /**
+     *
+     * print all movie titles
+     */
 
     public String allMovieTitles(){
         String MovieTitle = " ";
@@ -39,6 +42,7 @@ public class movieCollection {
         return MovieTitle;
     }
 
+    //print a list of movies whose genre include 14
     public String genre14(){
         String genre14MovieTitle = " ";
         for(int i = 0; i < results.length; i++){
@@ -49,9 +53,11 @@ public class movieCollection {
         System.out.println(genre14MovieTitle);
         return genre14MovieTitle;
     }
+
+    //print a list of movies whose vote average is larger than 5
     public String vote5(){
         String vote5MovieTitle = " ";
-        for(int i = 0; i < results.length; i++){
+        for(int i = 0; *i < results.length; i++){
             if(results[i].voteAve()) {
                 vote5MovieTitle += results[i].getTitle() + "\n";
             }
@@ -59,6 +65,8 @@ public class movieCollection {
         System.out.println(vote5MovieTitle);
         return vote5MovieTitle;
     }
+
+    ////print a list of movies whose popularity is larger than 100
     public String pop1(){
         String pop1MovieTitle = " ";
         for(int i = 0; i < results.length; i++){
@@ -69,7 +77,6 @@ public class movieCollection {
         System.out.println(pop1MovieTitle);
         return pop1MovieTitle;
     }
-
 
 
 
