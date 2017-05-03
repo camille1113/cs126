@@ -1,29 +1,27 @@
 package com.example.zhanglanxin.Eatmate;
 
-import android.app.Dialog;
+
+import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -32,9 +30,7 @@ public class DetailActivity extends AppCompatActivity {
     private DatabaseReference mRestaurantReference;
 
     private RecyclerView mRecyclerView;
-
-    private static final String TAG = "DataBase";
-    private static final String REQUIRED = "Required";
+    private static Restaurant restaurant;
 
     private TextView mTitleField;
     private EditText mBodyField;
@@ -52,9 +48,8 @@ public class DetailActivity extends AppCompatActivity {
         // get references to the views.
         mTitleField = (TextView) findViewById(R.id.field_title);
         Intent intent = getIntent();
-        final Restaurant restaurant = intent.getParcelableExtra(RestaurantAdapter.RESTAURANT);
+        restaurant = intent.getParcelableExtra(RestaurantAdapter.RESTAURANT);
         mTitleField.setText("Customers in "  + restaurant.getName() + ": ");
-
         mRestaurantReference = database.getReference(restaurant.getName());
 
         //adapter
@@ -76,9 +71,10 @@ public class DetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String username = mBodyField.getText().toString();
-                mRestaurantReference.child("Customers").push().setValue(username);
-
-                finish();
+                mRestaurantReference.child("Customers").child(username).setValue(username);
+                //hide keyboard after typing
+                InputMethodManager imm = (InputMethodManager) v.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
             }
         });
     }
@@ -106,11 +102,23 @@ public class DetailActivity extends AppCompatActivity {
     public static class UsernameViewHolder extends RecyclerView.ViewHolder {
 
         public TextView mTextView;
+        public ImageView deleteIcon;
 
         public UsernameViewHolder(View itemView) {
             super(itemView);
             mTextView = (TextView) itemView.findViewById(R.id.nameTextView);
-        }
+            deleteIcon = (ImageView)itemView.findViewById(R.id.task_delete);
+            deleteIcon.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String removeName = mTextView.getText().toString();
+                    Toast.makeText(v.getContext(), removeName + "is leaving the restaurant", Toast.LENGTH_LONG).show();
+                    DatabaseReference mReference = FirebaseDatabase.getInstance().
+                            getReference(restaurant.getName());
+                    mReference.child("Customers").child(removeName).removeValue();
+                }
+            });
+       }
 
     }
 
